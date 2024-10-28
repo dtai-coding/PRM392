@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:weightSum="5"
+    android:gravity="center_vertical">
+
+    <!-- Item Image -->
+    <ImageView
+        android:id="@+id/ivCartImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_placeholder_image"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Item Name and Price -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: $0.00"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_green_dark" />
+    </LinearLayout>
+
+    <!-- Quantity Edit Button -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnDecreaseQuantity"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_subtract"
+            android:background="@drawable/rounded_button_background"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvItemQuantity"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/btnIncreaseQuantity"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_add"
+            android:background="@drawable/rounded_button_background"
+            android:backgroundTint="@android:color/holo_green_dark" />
+    </LinearLayout>
+
+    <!-- Delete Button -->
+    <ImageButton
+        android:id="@+id/btnDeleteItem"
+        android:layout_width="10dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_delete"
+        app:backgroundTint="@android:color/holo_red_dark"
+        android:contentDescription="Delete Item" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Faded color for hint when EditText is not focused (inactive) -->
+    <item android:state_enabled="true" android:state_focused="false" android:color="#808080" />
+    <!-- Fully opaque color for input text (focused or typed in) -->
+    <item android:state_enabled="true" android:state_focused="true" android:color="#000000" />
+    <!-- Fallback color for actual input -->
+    <item android:state_enabled="true" android:state_focused="true" android:color="#000000" />
+</selector>
